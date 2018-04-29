@@ -7,3 +7,4 @@
 - [ ]  Reduce knife and grenade damage somewhat.
 - [ ]  Adjust the amount of raptors depending on the map.
 - [ ]  Allow dead players to be revived by going into the terrorist nest.
+- [ ]  Provide players with just the kevlar and not the helm.
