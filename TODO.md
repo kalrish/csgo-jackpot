@@ -8,3 +8,4 @@
 - [ ]  Adjust the amount of raptors depending on the map.
 - [ ]  Allow dead players to be revived by going into the terrorist nest.
 - [ ]  Provide players with just the kevlar and not the helm.
+- [ ]  Play Jurassic Park or Harry Potter music whenever a player performs a moonjump, or when they do so while being surrounded by enemies.
