@@ -1,0 +1,70 @@
+"GameModes_Server.txt"
+{
+	"gameTypes"
+	{
+		"custom"
+		{
+			"value"		"3"
+			"nameID"	"#SFUI_GameTypeCustom"
+			
+			"gameModes"
+			{
+				"custom"
+				{
+					"value"				"0"
+					"nameID"			"#SFUI_GameModeCustom"
+					"descID"			"#SFUI_GameModeCustomDesc"
+					"descID_List"		"#SFUI_GameModeCustomDescList"
+					"showdisclaimer"	"1"
+					"uid"				"30"
+					"maxplayers"		"47"
+					
+					// These are the descriptive ui elements to display in the information box on.
+					// These key/values should be pairs of strings.  The "key" will appear in the left
+					// column, the "value" will appear in the right column.
+					"ui"
+					{
+						"0"		{ "label" "#SFUI_CashColon"				"value" "$16,000" }
+						"1"		{ "label" "#SFUI_WinMatchColon"			"value" "30 #SFUI_Minutes" }
+						"2"		{ "label" "#SFUI_TimePerRoundColon"		"value" "5 #SFUI_Minutes" }
+						"3"		{ "label" "#SFUI_BuyTimeColon"			"value" "90 #SFUI_Seconds" }
+						"4"		{ "label" "#SFUI_SpectateColon"			"value" "#SFUI_SpectateAnyone" }
+						// Bot data is determined by user selection.
+					}
+					
+					// Configs executed when a game mode of this type is created
+					"exec"
+					{
+						"exec" "gamemode_zombies.cfg"
+					}
+					
+					// Map groups for offline modes (rather uninteresting)
+					"mapgroupsSP"
+					{
+						"mg_raptor_tour"	""
+					}
+					
+					// Map groups for online modes
+					"mapgroupsMP"
+					{
+						"mg_raptor_tour"	""
+					}
+				}
+			}
+		}
+	}
+	
+	"mapgroups"
+	{
+		"mg_raptor_tour"
+		{
+			"name"	"mg_raptor_tour"
+			"maps"
+			{
+				"workshop/181366610/mcdonalds-mds-csgo"		""
+				"de_dust"									""
+				"de_dust2"									""
+			}
+		}
+	}
+}
