@@ -1,0 +1,5 @@
+---
+- name: 'Provision Counter Strike: Global Offensive Algos-tuned server'
+  hosts: all
+  roles:
+     - csgo_server_algos
