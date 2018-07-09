@@ -1,0 +1,35 @@
+---
+- name: Upload autoexec.cfg
+  copy:
+     src: 'autoexec.cfg'
+     dest: '{{ csgo_install_dir }}/csgo/cfg/autoexec.cfg'
+  become: yes
+  become_user: steam
+- name: Upload server.cfg
+  copy:
+     src: 'server.cfg'
+     dest: '{{ csgo_install_dir }}/csgo/cfg/server.cfg'
+  become: yes
+  become_user: steam
+- name: Upload gamemodes_server.txt
+  copy:
+     src: 'gamemodes_server.txt'
+     dest: '{{ csgo_install_dir }}/csgo/gamemodes_server.txt'
+  become: yes
+  become_user: steam
+- name: Upload gamemode_zombies.cfg
+  copy:
+     src: 'gamemode_zombies.cfg'
+     dest: '{{ csgo_install_dir }}/csgo/cfg/gamemode_zombies.cfg'
+  become: yes
+  become_user: steam
+- name: Subscribe to workshop maps
+  lineinfile:
+     path: '{{ csgo_install_dir }}/csgo/maplist.txt'
+     line: 'workshop/{{ item.id }}/{{ item.name }}'
+     state: present
+     create: yes
+  loop:
+     - { id: '181366610', name: 'mcdonalds-mds-csgo' }
+  become: yes
+  become_user: steam
